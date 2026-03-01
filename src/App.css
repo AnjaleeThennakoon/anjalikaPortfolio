@@ -98,17 +98,6 @@ a, button, [role="button"] { cursor: none !important; }
   border: 2.5px solid var(--t);
 }
 
-/* ── Reveal animation base ───────────────────────────────────────── */
-.reveal-base {
-  opacity: 0;
-  transform: translateY(32px);
-  transition: opacity .85s var(--ease), transform .85s var(--ease);
-}
-.reveal {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
 /* ── Tilt cards ──────────────────────────────────────────────────── */
 .tilt-card {
   position: relative;
@@ -204,7 +193,6 @@ a, button, [role="button"] { cursor: none !important; }
 }
 .nav-logo:hover .nav-mark { transform: rotate(10deg) scale(1.1); }
 .nav-name { font-weight: 600; font-size: 14px; color: var(--fg); }
-.nav--scrolled .nav-name, .nav-name { transition: color .35s; }
 
 .nav-links {
   display: flex; align-items: center; gap: 4px;
@@ -371,16 +359,6 @@ a, button, [role="button"] { cursor: none !important; }
   animation: slideRight 1s .3s both;
 }
 @keyframes slideRight { from{opacity:0;transform:translateX(-30px)} to{opacity:1;transform:translateX(0)} }
-.wave {
-  font-size: 32px; display: inline-block;
-  animation: waveHand 2.5s ease-in-out infinite 1.5s;
-  transform-origin: 70% 70%;
-}
-@keyframes waveHand {
-  0%  {transform:rotate(0)} 10%{transform:rotate(14deg)} 20%{transform:rotate(-8deg)}
-  30%{transform:rotate(14deg)} 40%{transform:rotate(-4deg)} 50%{transform:rotate(10deg)}
-  60%,100%{transform:rotate(0)}
-}
 .greeting-sub {
   font-family: var(--mono); font-size: 13px; letter-spacing: .08em;
   color: var(--mut); text-transform: uppercase;
@@ -674,11 +652,8 @@ a, button, [role="button"] { cursor: none !important; }
   border-radius: 50px; padding: 12px 22px;
   opacity: 0; transform: translateY(20px);
   transition: opacity .6s var(--ease), transform .6s var(--ease), background .25s, border-color .25s;
-  animation: none;
 }
-.fact-chip.reveal {
-  opacity: 1; transform: translateY(0);
-}
+.fact-chip.reveal { opacity: 1; transform: translateY(0); }
 .fact-chip:hover {
   background: rgba(0,180,216,.15);
   border-color: rgba(0,180,216,.35);
@@ -717,7 +692,6 @@ a, button, [role="button"] { cursor: none !important; }
 .skill-card--teal:hover  .skill-pill { background:rgba(0,180,216,.09); color:var(--td); border-color:rgba(0,180,216,.22); }
 .skill-card--blue:hover  .skill-pill { background:rgba(46,134,171,.09); color:var(--b);  border-color:rgba(46,134,171,.22); }
 .skill-card--green:hover .skill-pill { background:rgba(6,214,160,.09);  color:#059669;   border-color:rgba(6,214,160,.22); }
-.skill-card--purple:hover.skill-pill { background:rgba(129,140,248,.09);color:#6366f1;  border-color:rgba(129,140,248,.22); }
 
 /* ── PROJECTS ────────────────────────────────────────────────────── */
 .projects-grid {
